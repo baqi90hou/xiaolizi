@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #outer{
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        border: 1px solid #000;
+    }
+    li{
+        list-style: none;
+        font-size: 14px;
+    }
+    #tab{
+        height: 30px;
+        background: #000;
+    }
+    #tab li{
+        width: 100px;
+        line-height: 30px;
+        color: #fff;
+        text-align: center;
+        float: left;
+        border-right: 1px solid #fff;
+    }
+    #content ul{
+      display: none;
+    }
+    #content ul li{
+        line-height: 25px;
+        text-align: center;
+        color: red;
+    }
+    .current{
+        background: #ccc;
+    }
+</style>
+<body>
+	<div id="outer">
+    <ul id="tab">
+        <li class="current">第一节</li>
+        <li>第二节</li>
+        <li>第三节</li>
+    </ul>
+    <div id="content">
+        <ul style="display:block;">
+            <li>阿狸</li>
+            <li>阿狸</li>
+            <li>阿狸</li>
+            <li>阿狸</li>
+            <li>阿狸</li>
+            <li>阿狸</li>
+            <li>阿狸</li>
+            <li>阿狸</li>
+        </ul>
+        <ul>
+            <li>桃子</li>
+            <li>桃子</li>
+            <li>桃子</li>
+            <li>桃子</li>
+            <li>桃子</li>
+            <li>桃子</li>
+            <li>桃子</li>
+            <li>桃子</li>
+        </ul>
+        <ul>
+            <li>海面宝宝</li>
+            <li>海面宝宝</li>
+            <li>海面宝宝</li>
+            <li>海面宝宝</li>
+            <li>海面宝宝</li>
+            <li>海面宝宝</li>
+        </ul>
+    </div>
+</div>
+<script>
+    
+    window.onload = function(){
+        var li = document.getElementById('tab').getElementsByTagName('li');
+        var li1 = document.getElementById('content').getElementsByTagName('ul')
+        for(var i=0;i<li.length;i++){
+            li[i].index = i;
+            li[i].onmouseover = function(){
+                for(var j=0;j<li.length;j++){
+                    li[j].className = "";
+                    this.className = "current";
+                    for(var k=0;k<li1.length;k++){
+                        li1[k].style.display = "none";
+                        li1[this.index].style.display = "block";
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

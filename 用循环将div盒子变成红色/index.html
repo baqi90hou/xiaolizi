@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#input{
+		margin-left: 550px;
+	}
+	#box{
+		margin-left: 450px;
+	}
+	#box p{
+		width: 100px;
+		height: 100px;
+		background: #000;
+		margin-left: 10px;
+		float: left;
+	}
+</style>
+<body>
+	<form>
+		<input type="button" value="点击将div变成红色" id="input">
+	</form>
+	<div id="box">
+		<p></p>
+		<p></p>
+		<p></p>
+	</div>
+	<script>
+	window.onload = function(){
+		var input = document.getElementById("input");
+		var p = document.getElementById("box").getElementsByTagName("p");
+		input.onclick = function(){
+			for(var i=0;i<p.length;i++){
+				p[i].style.background = "red";
+			}
+		}
+	}
+		
+
+	</script>
+</body>
+</html>

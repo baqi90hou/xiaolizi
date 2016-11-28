@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#box{
+		width: 200px;
+		height: 200px;
+		background: #000;
+		margin: 0 auto;
+	}
+	#box p{
+		text-align: center;
+		line-height: 20px;
+		color: #fff;
+		font-size: 14px;
+		padding-top: 30px;
+	}
+</style>
+<body>
+		
+	<div id="box">
+		<p>鼠标移入移出改变样式
+	</div></p>
+	<script>
+		var box = document.getElementById('box');
+		box.onmouseover  = function(){
+			this.style.background = "#ccc";
+			this.style.border = "10px solid #f00"
+		}
+		box.onmouseout = function(){
+			this.style.background = "";
+			this.style.border = ""
+		}
+	</script>
+</body>
+</html>

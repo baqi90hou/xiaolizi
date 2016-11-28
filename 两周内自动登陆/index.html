@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#wrap{
+		width: 200px;
+		margin: 10px auto;
+	}
+	#warn{
+		border: 1px solid #f00;
+		background: orange;
+		line-height: 20px;
+		font-size: 12px;
+		display: none;
+		padding: 10px;
+	}
+</style>
+<body>
+	<div id="wrap">
+		<p id="p"><input type="checkbox">两周内自动登陆</p>
+		<div id="warn">为了您的信息安全，请不要在网吧或公用电脑上使用此功能</div>
+	</div>
+</body>
+<script>
+	
+	var p = document.getElementById('p');
+	var warn = document.getElementById('warn')
+	p.onmouseover = function(){
+		warn.style.display = "block";
+	}
+	p.onmouseout = function(){
+		warn.style.display = "none";
+	}
+</script>
+</html>

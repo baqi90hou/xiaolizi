@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		background:#A3C5A8;	
+	}
+	a{
+		color: #fff;
+		text-decoration: none;
+		font-size: 12px;
+	}
+	li{
+		list-style: none;
+		font-size: 14px;
+	}
+	#box{
+		margin-left: 400px;
+	}
+	#color li{
+		float: left;
+		width: 20px;
+		height: 20px;
+		margin-left: 10px;
+		list-style: none;
+		color: #fff;
+		margin-bottom: 20px;
+		text-align: center;
+		line-height: 20px;
+	}
+	#red{
+		background: red;
+	}
+	#green{
+		background: green;
+	}
+	#black{
+		background: black;
+	}
+	#nav{
+		clear: both;
+	}
+	#nav li{	
+		float: left;
+		width: 80px;
+		height: 20px;
+		margin-left:1px;
+		background: green;
+		text-align: center;
+	}
+</style>
+<link rel="stylesheet" href="red.css">
+<body>
+	<div id="box">
+		<ul id="color">
+			<li id="red">红</li>
+			<li id="green">绿</li>
+			<li id="black">蓝</li>
+		</ul>
+		<ul id="nav">
+			<li><a href="javascript:;">新闻</a></li>
+	        <li><a href="javascript:;">娱乐</a></li>
+	        <li><a href="javascript:;">体育</a></li>
+	        <li><a href="javascript:;">电影</a></li>
+	        <li><a href="javascript:;">音乐</a></li>
+	        <li><a href="javascript:;">旅游</a></li>
+		</ul>
+	</div>
+	<script>
+		window.onload = function(){
+			var link = document.getElementsByTagName("link")[0];
+			var li = document.getElementById('color').getElementsByTagName('li');
+			for(var i=0;i<li.length;i++){
+				li[i].onclick = function(){
+					link['href'] = this.id + ".css";	
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>

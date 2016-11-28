@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#box p{
+		text-align: center;
+	}
+	#input{
+		width: 350px;
+	}
+	#box span{
+		color: #ccc;
+		font-size: 12px;
+	}
+</style>
+<body>
+	<div id="box">
+		<p><input type="text" value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20" id="input"><span>输入数字求和，数字之间用半角","号分隔</span></p>
+		<p><input type="button" value="求和" id="add"></p>
+		<p id="num"></p>
+	</div>
+	<script>
+		var add = document.getElementById('add');
+		var input = document.getElementById('input')
+		var num = document.getElementById('num')
+		add.onclick = function(){
+			var min = 0;
+			var input = document.getElementById('input').value.split(",");
+			for (var i in input){
+				min += parseInt(input[i])
+			}
+			num.innerHTML = min;
+		}
+	</script>
+</body>
+</html>

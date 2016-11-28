@@ -1,0 +1,11 @@
+body{
+	background:yellow;	
+}
+#nav{
+	background:green;
+	border-color:#fff;	
+}
+#nav li{
+	border-color:#fff;	
+	background:green;
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	p{
+		text-align: center;
+	}
+</style>
+<body>
+	<p><input type="text" value="太原市" id="one"></p>
+	<p><input type="text" value="长风街" id="two"></p>
+	<p><input type="button" value="传参" id="add"></p>
+</body>
+<script>
+	var give = function(a,b){
+		alert(a.value);
+		alert(b.value)
+	}
+	var add = document.getElementById('add')
+	var one = document.getElementById('one')
+	var two = document.getElementById('two')
+	add.onclick = function(){
+		give(one,two)
+	}
+</script>
+</html>

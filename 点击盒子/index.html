@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#wrap{
+		width: 500px;
+		margin: 0 auto;
+	}
+	#wrap p{
+		cursor:pointer;
+		margin-bottom: 20px;
+		border: 2px solid #f00;
+
+	}
+</style>
+<body>
+	<div id="wrap">
+		<p>bcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fd </p>
+		<p>bcjbfj b bdsb bfbds bdbs fd bcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fd</p>
+		<p>bcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fd </p>
+		<p>bcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fdbcjbfj b bdsb bfbds bdbs fd </p>
+	</div>
+	<script>
+		var wrap = document.getElementById('wrap');
+		var p = document.getElementsByTagName('p')
+		for(var i=0;i<p.length;i++){
+			p[i].onclick = function(){
+				alert(this.innerHTML)
+			}
+		}
+	</script>
+</body>
+</html>

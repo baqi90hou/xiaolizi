@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	form{
+		margin: 10px 0 10px 550px;
+	}
+	#box{
+		width: 100px;
+		height: 100px;
+		background: #000;
+		margin: 0 auto;
+	}
+</style>
+<body>
+	<form>
+		<input type="button" value="变宽" id="one">
+		<input type="button" value="变高" id="two">
+		<input type="button" value="变色" id="three">
+		<input type="button" value="隐藏" id="four">
+		<input type="button" value="重置" id="five">
+	</form>
+	<div id="box"></div>
+	<script>
+	var changeStyle = function (elem, attr, value)
+	{
+		elem.style[attr] = value
+	};
+		window.onload = function(){
+				var oBtn = document.getElementsByTagName("input");
+				var oDiv = document.getElementById("box");
+				var oAtt = ["width","height","background","display","display"];
+				var oVal = ["200px","200px","red","none","block"];
+
+				for (var i = 0; i < oBtn.length; i++)
+				{
+					oBtn[i].index = i;
+					oBtn[i].onclick = function ()
+					{
+						this.index == oBtn.length - 1 && (oDiv.style.cssText = "");
+						changeStyle(oDiv, oAtt[this.index], oVal[this.index])
+					}	
+				}
+			/*var one = document.getElementById('one');
+			var two = document.getElementById('two');
+			var three = document.getElementById('three');
+			var four = document.getElementById('four');
+			var five = document.getElementById('five');
+			var box = document.getElementById('box');
+			var val = ["200px","200px","red","none","block"];
+			one.onclick = function(){
+				box.style.width = "150px";
+			}
+			two.onclick = function(){
+				box.style.height = "150px";
+			}
+			three.onclick = function(){
+				box.style.background = "red";
+			}
+			four.onclick = function(){
+				box.style.display = "none";
+			}
+			five.onclick = function(){
+				box.style.height = "150px";
+			}*/
+		}
+
+	</script>
+</body>
+</html>

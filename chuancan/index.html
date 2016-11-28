@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数传参，改变任意属性的值</title>
+</head>
+<style>
+	.wrap{
+		width: 500px;
+		height: 500px;
+		border: 1px solid #f00;
+		margin: 20px auto;
+	}
+	.wrap p{
+		text-align: center;
+		font-size: 12px;
+	}
+	.wrap input{
+		padding-left: 5px;
+	}
+	#box{
+		width: 200px;
+		height: 180px;
+		margin:  0 auto;
+		background: #000;
+		color: #fff;
+		font-size: 12px;
+		padding-top: 20px;
+		line-height: 20px;
+		text-align: center;
+	}
+</style>
+<body>
+	<div class="wrap">
+		<p>属性名：<input type="text" value="background"></p>
+		<p>属性值：<input type="text" value="blue"></p>
+		<p><button id="but1">确定</button>     <button>重置</button></p>
+		<div id="box">在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。</div>
+	</div>
+	<script>
+		var btn = document.getElementsByTagName('button')
+		var box = document.getElementById('box')
+		var input = document.getElementsByTagName('input');
+		//方法一
+		/*function change(box,shu,zhi){
+			box.style[shu] = zhi;
+		}
+		btn[0].onclick = function(){
+			change(box,input[0].value,input[1].value)
+		}
+		btn[1].onclick = function(){
+			box.removeAttribute("style")
+		}*/
+
+		//方法二
+			btn[0].onclick = function(){
+				//box.style.background = "blue"
+				box.style["background"] = "blue"
+			}
+			btn[1].onclick = function(){
+				box.style.background = "#000"
+			}
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#wrap{
+		width: 565px;
+		height: 230px;
+		border: 2px solid #000;
+		margin: 10px auto;
+	}
+	#wrap ul li{
+		list-style: none;
+		width: 105px;
+		height: 105px;
+		float: left;
+		border: 1px solid #000;
+		margin:5px 0 0 5px;
+	}
+	#wrap ul li img{
+		width: 100px;
+		height: 100px;
+		opacity:0.3;
+		cursor:crosshair;
+		filter:alpha(opacity=30)
+	}
+	#wrap ul li.bg img{
+		opacity:1;
+		filter:alpha(opacity=100)
+	}
+</style>
+<body>
+	<div id="wrap">
+		<ul>
+			<li><img src="imgs/pic1.jpg" /></li>
+		    <li><img src="imgs/pic2.jpg" /></li>
+		    <li><img src="imgs/pic3.jpg" /></li>
+		    <li><img src="imgs/pic4.jpg" /></li>
+		    <li><img src="imgs/pic5.jpg" /></li>
+		    <li><img src="imgs/pic6.jpg" /></li>
+		    <li><img src="imgs/pic7.jpg" /></li>
+		    <li><img src="imgs/pic8.jpg" /></li>
+		    <li><img src="imgs/pic9.jpg" /></li>
+		    <li><img src="imgs/pic10.jpg" /></li>
+		</ul>
+	</div>
+	<script>
+		var li = document.getElementsByTagName('li');
+		window.onload = function(){
+			for(var i=0;i<li.length;i++){
+				li[i].onmouseover = function(){
+					this.className = "bg"
+				}
+				li[i].onmouseout = function(){
+					this.className = ""
+				}
+			}
+		}
+	</script>
+</body>
+</html>

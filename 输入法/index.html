@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+	#wrap{
+		width: 80px;
+		margin: 0 auto;
+	}
+	a{
+		font-size: 12px;
+		text-decoration: none;
+	}
+	#nav{
+		margin-top:5px;
+		background:#fff;
+		border:1px solid #9a99ff;
+		display: none;
+	}
+	#nav li{
+		list-style: none;
+		line-height: 25px;
+		text-align: center;
+		border-bottom: 1px solid #f00;
+	}
+	#nav li a:hover{
+		background: blue;
+		display: inline-block;
+		width: 100%;
+	}
+</style>
+<body>
+	<div id="wrap">
+		<button>输入法</button>
+		<ul id="nav">
+			<li><a href="#">手写</a></li>
+			<li><a href="#">拼音</a></li>
+			<li id="close"><a href="#">关闭</a></li>
+		</ul>
+	</div>
+	<script>
+		var button = document.getElementsByTagName('button');
+		var nav = document.getElementById('nav');
+		var close = document.getElementById('close');
+		var li = document.getElementById("nav").getElementsByTagName('li')
+		button[0].onclick = function(){
+			nav.style.display = "block"
+		}
+		close.onclick = function(){
+			nav.style.display = "none"
+		}
+	</script>
+</body>
+</html>
